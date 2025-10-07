@@ -16,7 +16,7 @@ spec:
       targetPort: 9090
       protocol: TCP
 ---
-# Port forward service for easy access
+# External access without NodePort conflicts
 apiVersion: v1
 kind: Service
 metadata:
@@ -31,5 +31,5 @@ spec:
     - name: web
       port: 9091
       targetPort: 9090
-      nodePort: 30090
+      # Let Kubernetes auto-assign a free NodePort
       protocol: TCP
