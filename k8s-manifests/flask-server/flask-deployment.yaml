@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-load
+  namespace: monitoring   # move from default
+  labels:
+    app: flask-load
+spec:
+  selector:
+    matchLabels:
+      app: flask-load
+  template:
+    metadata:
+      labels:
+        app: flask-load
+    spec:
+      containers:
+        - name: flask
+          image: flask-loadtest:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5050
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5050
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5050
+            initialDelaySeconds: 5
+            periodSeconds: 10
+      restartPolicy: Always
+
