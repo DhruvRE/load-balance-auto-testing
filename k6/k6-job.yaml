@@ -3,53 +3,36 @@ kind: Job
 metadata:
   name: k6-load
   namespace: default
+  labels:
+    app: k6-load
 spec:
   template:
+    metadata:
+      labels:
+        app: k6-load
     spec:
       containers:
         - name: k6
-          image: loadimpact/k6:latest
-          command: ["k6", "run", "/scripts/loadtest.js"]
+          image: dhruvre/k6-loadtest:latest
+          command: ["k6", "run", "./loadtest.js"]
           volumeMounts:
-            - name: scripts
+            - name: k6-scripts
               mountPath: /scripts
-      restartPolicy: Never
+          env:
+            - name: TARGET
+              value: "http://flask-load.monitoring.svc.cluster.local:5051/burn?seconds=3&work=1"
+            - name: K6_OUT
+              value: "json=/tmp/k6-results.json"
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
       volumes:
-        - name: scripts
+        - name: k6-scripts
           configMap:
             name: k6-scripts
+      restartPolicy: Never
   backoffLimit: 2
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: k6-scripts
-  namespace: default
-data:
-  loadtest.js: |
-    import http from "k6/http";
-    import { sleep } from "k6";
-    import { Trend } from "k6/metrics";
-
-    export let burnLatency = new Trend("burn_latency");
-
-    export let options = {
-      stages: [
-        { duration: "30s", target: 10 },
-        { duration: "60s", target: 50 },
-        { duration: "60s", target: 200 },
-        { duration: "30s", target: 50 },
-        { duration: "30s", target: 0 }
-      ],
-      thresholds: {
-        "http_req_duration": ["p(95)<2000"]
-      }
-    };
-
-    export default function () {
-      const url = __ENV.TARGET || "http://flask-load.monitoring.svc.cluster.local:5050/burn?seconds=3&work=1";  // Changed to 5050
-      let start = Date.now();
-      let res = http.get(url);
-      burnLatency.add(Date.now() - start);
-      sleep(0.05);
-    }

@@ -1,18 +1,20 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: flask-monitor
+  name: flask-load
   namespace: monitoring
   labels:
-    release: monitoring  # Matches your Helm release
+    app: flask-load
+    release: kube-prom  # This label helps Prometheus find this ServiceMonitor
 spec:
   selector:
     matchLabels:
       app: flask-load
   endpoints:
-    - port: http  # Flask service port name
+    - port: http
       path: /metrics
       interval: 15s
+      scrapeTimeout: 10s
   namespaceSelector:
     matchNames:
       - monitoring

@@ -3,7 +3,6 @@ from datetime import datetime
 from functools import wraps
 from prometheus_client import Counter, Histogram, generate_latest, CONTENT_TYPE_LATEST
 import time
-
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -42,7 +41,7 @@ def metrics():
 @app.route("/health", methods=["GET"])
 @observe_metrics("/health")
 def health():
-    return {"status": "ok"}, 200
+    return {"status": "ok", "timestamp": datetime.utcnow().isoformat()}, 200
 
 # CPU burn endpoint (for load testing)
 @app.route("/burn", methods=["GET"])
@@ -55,7 +54,7 @@ def burn_cpu():
     except:
         seconds = 5.0
         work = 1
-
+    
     end_time = time.time() + max(0.1, seconds)
     # Busy loop doing some math (keeps CPU busy)
     x = 0.0001
@@ -66,10 +65,16 @@ def burn_cpu():
         else:
             # Short sleep to simulate lighter load
             time.sleep(0.01)
-    return jsonify({"status": "burned", "seconds": seconds}), 200
+    
+    return jsonify({
+        "status": "burned",
+        "seconds": seconds,
+        "work": work,
+        "timestamp": datetime.utcnow().isoformat()
+    }), 200
 
 # -----------------------------
 # Entry
 # -----------------------------
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5050)
+    app.run(host="0.0.0.0", port=5051)

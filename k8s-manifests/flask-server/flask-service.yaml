@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-load-svc  # Changed
+  name: flask-load-svc
   namespace: monitoring
 spec:
   selector:
     app: flask-load
   ports:
     - name: http
-      port: 5050
-      targetPort: 5050
+      port: 5051          # Exposed service port
+      targetPort: 5051    # Must match container port in Deployment
+  type: ClusterIP

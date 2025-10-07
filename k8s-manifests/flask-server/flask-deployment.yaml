@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-load
-  namespace: monitoring   # move from default
+  namespace: monitoring
   labels:
     app: flask-load
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: flask-load
@@ -13,13 +14,22 @@ spec:
     metadata:
       labels:
         app: flask-load
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "5051"
+        prometheus.io/path: "/metrics"
     spec:
       containers:
         - name: flask
-          image: flask-loadtest:latest
+          image: dhruvre/flask-loadtest:v3
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 5050
+            - containerPort: 5051
+              name: http
+              protocol: TCP
+          env:
+            - name: FLASK_ENV
+              value: "production"
           resources:
             requests:
               cpu: "100m"
@@ -30,14 +40,17 @@ spec:
           livenessProbe:
             httpGet:
               path: /health
-              port: 5050
+              port: 5051
             initialDelaySeconds: 10
             periodSeconds: 15
+            timeoutSeconds: 5
+            failureThreshold: 3
           readinessProbe:
             httpGet:
               path: /health
-              port: 5050
+              port: 5051
             initialDelaySeconds: 5
             periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
       restartPolicy: Always
-
