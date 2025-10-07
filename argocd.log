@@ -1,0 +1,58 @@
+nohup: ignoring input
+Forwarding from 127.0.0.1:8081 -> 8080
+Forwarding from [::1]:8081 -> 8080
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+E1007 15:40:06.505424  315139 portforward.go:385] error copying from remote stream to local connection: readfrom tcp6 [::1]:8081->[::1]:35110: write tcp6 [::1]:8081->[::1]:35110: write: broken pipe
+E1007 15:40:06.505623  315139 portforward.go:385] error copying from remote stream to local connection: readfrom tcp6 [::1]:8081->[::1]:35084: write tcp6 [::1]:8081->[::1]:35084: write: broken pipe
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+E1007 15:41:41.643393  315139 portforward.go:385] error copying from remote stream to local connection: readfrom tcp6 [::1]:8081->[::1]:60580: write tcp6 [::1]:8081->[::1]:60580: write: broken pipe
+E1007 15:41:41.643393  315139 portforward.go:385] error copying from remote stream to local connection: readfrom tcp6 [::1]:8081->[::1]:60560: write tcp6 [::1]:8081->[::1]:60560: write: broken pipe
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+E1007 15:47:23.502240  315139 portforward.go:385] error copying from remote stream to local connection: readfrom tcp6 [::1]:8081->[::1]:55640: write tcp6 [::1]:8081->[::1]:55640: write: broken pipe
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+E1007 15:47:27.502467  315139 portforward.go:385] error copying from remote stream to local connection: readfrom tcp6 [::1]:8081->[::1]:55660: write tcp6 [::1]:8081->[::1]:55660: write: broken pipe
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+Handling connection for 8081
+E1007 15:48:37.507617  315139 portforward.go:385] error copying from remote stream to local connection: readfrom tcp6 [::1]:8081->[::1]:50462: write tcp6 [::1]:8081->[::1]:50462: write: broken pipe

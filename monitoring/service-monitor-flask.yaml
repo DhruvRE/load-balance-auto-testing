@@ -1,0 +1,18 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: flask-monitor
+  namespace: monitoring
+  labels:
+    release: monitoring  # Matches your Helm release
+spec:
+  selector:
+    matchLabels:
+      app: flask-load
+  endpoints:
+    - port: http  # Flask service port name
+      path: /metrics
+      interval: 15s
+  namespaceSelector:
+    matchNames:
+      - monitoring

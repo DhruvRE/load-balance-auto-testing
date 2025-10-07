@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-react-flask-app
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    repoURL: "https://github.com/DhruvRE/load-balance-auto-testing.git"  # Replace
+    targetRevision: HEAD
+    path: "k8s-manifests"  # Updated
+    directory:
+      recurse: true  # Ensure subdirs are included
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

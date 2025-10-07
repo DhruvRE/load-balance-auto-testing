@@ -1,0 +1,9 @@
+nohup: ignoring input
+Forwarding from 127.0.0.1:5051 -> 5050
+Forwarding from [::1]:5051 -> 5050
+Handling connection for 5051
+Handling connection for 5051
+Handling connection for 5051
+Handling connection for 5051
+E1007 15:52:01.458802  315141 portforward.go:413] an error occurred forwarding 5051 -> 5050: error forwarding port 5050 to pod e488e1eb18172ac55f46a04c7634bbed86c404f61abd661a958c4ee9a567a39c, uid : exit status 1: 2025/10/07 10:22:01 socat[80810] E connect(5, AF=2 127.0.0.1:5050, 16): Connection refused
+error: lost connection to pod

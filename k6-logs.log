@@ -1,0 +1,2 @@
+nohup: ignoring input
+error: error from server (NotFound): jobs.batch "k6-load" not found in namespace "default"

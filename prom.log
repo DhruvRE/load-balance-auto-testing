@@ -1,0 +1,9 @@
+nohup: ignoring input
+Forwarding from 127.0.0.1:9091 -> 9090
+Forwarding from [::1]:9091 -> 9090
+Handling connection for 9091
+Handling connection for 9091
+Handling connection for 9091
+Handling connection for 9091
+E1007 15:40:26.504781  315142 portforward.go:413] an error occurred forwarding 9091 -> 9090: error forwarding port 9090 to pod 5a535a42d6ed8144ff8eb6d21c795e64878a4efcc4d259a867673ccc6b5ad5ce, uid : container not running (5a535a42d6ed8144ff8eb6d21c795e64878a4efcc4d259a867673ccc6b5ad5ce)
+error: lost connection to pod

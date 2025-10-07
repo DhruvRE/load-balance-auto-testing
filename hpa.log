@@ -1,0 +1,10 @@
+nohup: ignoring input
+NAME             REFERENCE               TARGETS       MINPODS   MAXPODS   REPLICAS   AGE
+flask-load-hpa   Deployment/flask-load   cpu: 5%/50%   2         10        2          76m
+flask-load-hpa   Deployment/flask-load   cpu: 1%/50%   2         10        2          77m
+flask-load-hpa   Deployment/flask-load   cpu: 474%/50%   2         10        2          86m
+flask-load-hpa   Deployment/flask-load   cpu: 474%/50%   2         10        4          87m
+flask-load-hpa   Deployment/flask-load   cpu: 474%/50%   2         10        8          87m
+flask-load-hpa   Deployment/flask-load   cpu: 474%/50%   2         10        10         87m
+flask-load-hpa   Deployment/flask-load   cpu: 312%/50%   2         10        10         87m
+flask-load-hpa   Deployment/flask-load   cpu: 89%/50%    2         10        10         88m

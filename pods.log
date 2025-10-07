@@ -1,0 +1,85 @@
+nohup: ignoring input
+NAME                          READY   STATUS    RESTARTS       AGE
+flask-load-5c9f67b6f7-9nr6p   1/1     Running   0              18m
+flask-load-5c9f67b6f7-hl7rk   1/1     Running   15 (24m ago)   71m
+flask-load-5c9f67b6f7-hl7rk   0/1     Running   15 (34m ago)   81m
+flask-load-5c9f67b6f7-jbqhj   0/1     Pending   0              0s
+flask-load-5c9f67b6f7-hmk7s   0/1     Pending   0              0s
+flask-load-5c9f67b6f7-jbqhj   0/1     Pending   0              0s
+flask-load-5c9f67b6f7-hmk7s   0/1     Pending   0              0s
+flask-load-5c9f67b6f7-jbqhj   0/1     ContainerCreating   0              0s
+flask-load-5c9f67b6f7-hmk7s   0/1     ContainerCreating   0              0s
+flask-load-5c9f67b6f7-9nr6p   0/1     Running             0              28m
+flask-load-5c9f67b6f7-hmk7s   0/1     Running             0              1s
+flask-load-5c9f67b6f7-jbqhj   0/1     Running             0              1s
+flask-load-5c9f67b6f7-hmk7s   1/1     Running             0              12s
+flask-load-5c9f67b6f7-jbqhj   1/1     Running             0              12s
+flask-load-5c9f67b6f7-hl7rk   0/1     Running             16 (0s ago)    81m
+flask-load-5c9f67b6f7-lvmgd   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-lvmgd   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-wkjd7   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-489m6   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-489m6   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-wkjd7   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-w2z2c   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-w2z2c   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-lvmgd   0/1     ContainerCreating   0              0s
+flask-load-5c9f67b6f7-wkjd7   0/1     ContainerCreating   0              0s
+flask-load-5c9f67b6f7-489m6   0/1     ContainerCreating   0              0s
+flask-load-5c9f67b6f7-w2z2c   0/1     ContainerCreating   0              0s
+flask-load-5c9f67b6f7-wkjd7   0/1     Running             0              1s
+flask-load-5c9f67b6f7-w2z2c   0/1     Running             0              1s
+flask-load-5c9f67b6f7-lvmgd   0/1     Running             0              1s
+flask-load-5c9f67b6f7-489m6   0/1     Running             0              1s
+flask-load-5c9f67b6f7-9nr6p   0/1     Running             1 (1s ago)     29m
+flask-load-5c9f67b6f7-hl7rk   1/1     Running             16 (11s ago)   81m
+flask-load-5c9f67b6f7-489m6   1/1     Running             0              12s
+flask-load-5c9f67b6f7-wkjd7   1/1     Running             0              12s
+flask-load-5c9f67b6f7-w2z2c   1/1     Running             0              12s
+flask-load-5c9f67b6f7-lvmgd   1/1     Running             0              12s
+flask-load-5c9f67b6f7-9nr6p   1/1     Running             1 (12s ago)    29m
+flask-load-5c9f67b6f7-xt5cf   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-xt5cf   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-8nd7d   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-8nd7d   0/1     Pending             0              0s
+flask-load-5c9f67b6f7-xt5cf   0/1     ContainerCreating   0              0s
+flask-load-5c9f67b6f7-8nd7d   0/1     ContainerCreating   0              0s
+flask-load-5c9f67b6f7-8nd7d   0/1     Running             0              1s
+flask-load-5c9f67b6f7-xt5cf   0/1     Running             0              1s
+flask-load-5c9f67b6f7-8nd7d   1/1     Running             0              12s
+flask-load-5c9f67b6f7-xt5cf   1/1     Running             0              12s
+flask-load-5c9f67b6f7-hmk7s   0/1     Running             0              43s
+flask-load-5c9f67b6f7-jbqhj   0/1     Running             0              43s
+flask-load-5c9f67b6f7-jbqhj   0/1     Running             1 (0s ago)     60s
+flask-load-5c9f67b6f7-hmk7s   0/1     Running             1 (1s ago)     66s
+flask-load-5c9f67b6f7-lvmgd   0/1     Running             0              53s
+flask-load-5c9f67b6f7-9nr6p   0/1     Running             1 (53s ago)    30m
+flask-load-5c9f67b6f7-jbqhj   1/1     Running             1 (11s ago)    71s
+flask-load-5c9f67b6f7-hmk7s   1/1     Running             1 (12s ago)    77s
+flask-load-5c9f67b6f7-wkjd7   0/1     Running             0              63s
+flask-load-5c9f67b6f7-489m6   0/1     Running             0              63s
+flask-load-5c9f67b6f7-hl7rk   0/1     Running             16 (71s ago)   82m
+flask-load-5c9f67b6f7-xt5cf   0/1     Running             0              53s
+flask-load-5c9f67b6f7-8nd7d   0/1     Running             0              53s
+flask-load-5c9f67b6f7-w2z2c   0/1     Running             0              73s
+flask-load-5c9f67b6f7-hl7rk   0/1     Running             17 (1s ago)    82m
+flask-load-5c9f67b6f7-9nr6p   0/1     Running             2 (1s ago)     30m
+flask-load-5c9f67b6f7-xt5cf   0/1     Running             1 (0s ago)     68s
+flask-load-5c9f67b6f7-hl7rk   1/1     Running             17 (12s ago)   83m
+flask-load-5c9f67b6f7-8nd7d   0/1     Running             1 (0s ago)     71s
+flask-load-5c9f67b6f7-489m6   0/1     Running             1 (1s ago)     87s
+flask-load-5c9f67b6f7-9nr6p   1/1     Running             2 (12s ago)    30m
+flask-load-5c9f67b6f7-lvmgd   0/1     Running             1 (1s ago)     90s
+flask-load-5c9f67b6f7-wkjd7   0/1     Running             1 (1s ago)     90s
+flask-load-5c9f67b6f7-w2z2c   0/1     Running             1 (0s ago)     90s
+flask-load-5c9f67b6f7-hmk7s   0/1     Running             1 (43s ago)    108s
+flask-load-5c9f67b6f7-xt5cf   1/1     Running             1 (11s ago)    79s
+flask-load-5c9f67b6f7-8nd7d   1/1     Running             1 (11s ago)    82s
+flask-load-5c9f67b6f7-jbqhj   0/1     Running             1 (53s ago)    113s
+flask-load-5c9f67b6f7-489m6   1/1     Running             1 (12s ago)    98s
+flask-load-5c9f67b6f7-w2z2c   1/1     Running             1 (11s ago)    101s
+flask-load-5c9f67b6f7-lvmgd   1/1     Running             1 (12s ago)    101s
+flask-load-5c9f67b6f7-wkjd7   1/1     Running             1 (12s ago)    101s
+flask-load-5c9f67b6f7-hmk7s   0/1     Running             2 (2s ago)     2m9s
+flask-load-5c9f67b6f7-jbqhj   1/1     Running             1 (73s ago)    2m13s
+flask-load-5c9f67b6f7-hmk7s   1/1     Running             2 (13s ago)    2m20s
